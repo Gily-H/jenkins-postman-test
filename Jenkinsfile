@@ -8,9 +8,9 @@ pipeline {
 			steps {
 				sh "npm --version"
 				sh "node --version"
-				npm install newman
+				sh "npm install newman"
 				sh "newman --version"
-				newman run --verbose test_collection.json
+				sh "newman run --verbose test_collection.json"
 			}
 		}
 	}
