@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('test') {
 			agent {
-				docker { image "alpine:latest" }
+				docker { image "node:slim" }
 			}
 			steps {
 				sh "npm --version"
