@@ -6,11 +6,13 @@ pipeline {
 				docker { image "node:slim" }
 			}
 			steps {
-				sh "npm --version"
-				sh "node --version"
-				sh "npm install newman"
-				sh "newman --version"
-				sh "newman run --verbose test_collection.json"
+				sh """
+					npm --version
+					node --version"
+					npm install newman"
+					newman --version"
+					newman run --verbose test_collection.json"
+				"""
 			}
 		}
 	}
